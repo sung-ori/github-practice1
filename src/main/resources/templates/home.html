@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html 	xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <title>SunnyTodayAgain</title>
+  <style type="text/css">
+    body {
+      background-color: teal;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: teal;
+      padding: 20px;
+    }
+    
+    #mark {
+      flex: 1;
+    }
+    
+    #title {
+      flex: 1;
+      text-align: center;
+      font-family: 'Bungee', cursive;
+    }
+    
+    h1 {
+      font-size: 50px;
+    }
+    
+    section {
+      background-color: teal;
+      padding: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    aside {
+      background-color: teal;
+      padding: 20px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: white;
+    }
+    
+    footer {
+      background-color: teal;
+      padding: 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    #contactbox1,
+    #contactbox2 {
+      display: inline-block;
+      width: 50%;
+    }
+    
+    #contactbox2 {
+      text-align: right;
+    }
+    
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+      section {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      aside {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+      
+      #contactbox1,
+      #contactbox2 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    
+    /* Image Styles */
+    #imgbox1 img,
+    #imgbox2 img,
+    #imgbox3 img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    /* Text Styles */
+    #letter1,
+    #letter2,
+    #letter3 {
+      text-align: center;
+      width: 100%;
+      margin-top: 20px;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Bungee" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div id="mark">
+      <h1 style="font-size: 50px;">⛈️🌥️🌤☀️️</h1>
+    </div>
+    <div id="title">
+      <h1>[ SUNNY.TODAY.AGAIN ]</h1>
+    </div>
+  </header>
+  <section>
+    <aside>
+      <div>
+      	<div>
+      	
+      	</div>
+        <p><a th:href="@{/member/joinForm}">Sign up</a> </p>
+        <p><a th:href="@{/member/loginForm}">Login<a/></p>
+        <p>Logout</p>
+        <p>Guestbook</p>
+        <p>Blog</p>
+        <p>Contact</p>
+      </div>
+    </aside>
+    <div id="mainbox1">
+      <div id="imgbox1">
+        <img style="max-width: 70%; height: auto;" alt="" th:src="@{img/team/1_오늘도 맑음_프로필 포토.jpg}">
+      </div>
+      <div id="letter1">
+        <p>텍스트텍스트텍스트텍스트텍스트</p>
+        <p>텍스트텍스트텍스트텍스트텍스트</p>
+        <p>텍스트텍스트텍스트텍스트텍스트</p>
+        <p>텍스트텍스트텍스트텍스트텍스트</p>
+        <p>텍스트텍스트텍스트텍스트텍스트</p>
+        <p>텍스트텍스트텍스트텍스트텍스트</p>
+      </div>
+    </div>
+    <div id="mainbox2">
+      <div id="imgbox2"></div>
+      <div id="letter2"></div>
+    </div>
+    <div id="mainbox3">
+      <div id="imgbox3"></div>
+      <div id="letter3"></div>
+    </div>
+  </section>
+  <footer>
+    <div id="contactbox1">
+      <p>Content 1</p>
+      <p>Content 2</p>
+    </div>
+    <div id="contactbox2">
+      <p>Content 3</p>
+      <p>Content 4</p>
+    </div>
+  </footer>
+</body>
+</html>

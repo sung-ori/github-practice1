@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<header>
+</header>
+
+<section>
+	<div>
+		<form th:action="@{/member/login}" method="post">
+			<input type="text" name="memberid" id="id" placeholder="아이디"><br>
+			<input type="password" name="memberpw" id="pw" placeholder="비밀번호"><br>
+			<input type="submit" value="로그인">
+		</form>	
+	</div>
+	<div>
+		<p th:if=${param.error}> 올바른 아이디, 비밀번호를 입력하세요.</p>
+		
+		<div th:if="${param.error}">
+			<script>
+				alret('올바른 아이디, 비밀번호를 입력하세요.');
+			</script>
+		</div>
+	</div>
+</section>
+
+</body>
+</html>

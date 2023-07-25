@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sunnytodayagain.practice1.dao.MemberDAO">
+	
+	<select id="selectOneId" parameterType="String" resultType="String">
+		select
+			memberid
+		from
+			STA_MEMBER
+		where
+			memberid = #{searchId}
+	</select>
+	
+	<insert id="insert" parameterType="Member">
+		insert into STA_MEMBER 
+		(memberid, memberpw, name, email, address, phone)
+		values
+		(#{memberid},#{memberpw},#{name},#{email},#{address},#{phone})
+	</insert>
+</mapper>

@@ -1,0 +1,15 @@
+멤버 테이블 생성
+
+create table STA_member (
+
+	memberid varchar2(20) primary key,
+	memberpw varchar2(100) not null,
+	name	varchar2(20) not null,
+	email 	varchar2(30),
+	phone	varchar2(30),
+	address varchar2(200),
+	enabled	number(1) default 1 check (enabled in (1,0)),
+	rolename varchar2(20) default 'ROLE_STD' check(rolename in ('ROLE_STD', 'ROLE_STA'))
+    );
+	
+	
